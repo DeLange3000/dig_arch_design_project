@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../design_project.srcs/mix_columns/new/LUT_mul2.vhd" \
+"../../../../design_project.srcs/mix_columns/new/LUT_mul3.vhd" \
+"../../../../design_project.srcs/mix_columns/new/mix_columns.vhd" \
+"../../../../design_project.srcs/mix_columns/new/mix_columns_tb.vhd" \
+
+# Do not sort compile order
+nosort

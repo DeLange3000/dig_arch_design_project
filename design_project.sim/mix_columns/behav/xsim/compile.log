@@ -1,0 +1,8 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'LUT_mul2'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'LUT_mul3'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mix_columns'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mix_columns_tb'

@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../design_project.srcs/add_round_key/new/add_round_key.vhd" \
+"../../../../design_project.srcs/add_round_key/new/add_round_key_tb.vhd" \
+
+# Do not sort compile order
+nosort

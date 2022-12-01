@@ -1,0 +1,1 @@
+-wto "906328c0b7ac4096b47c5981b9798ecb" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "mix_columns_tb_behav" "xil_defaultlib.mix_columns_tb" -log "elaborate.log" 
