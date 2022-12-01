@@ -57,6 +57,7 @@ signal a1, a2, a3, a4, b1, b2, b3, b4: std_logic_vector(31 downto 0);
 
 begin
 
+--calculates the first riw, then the second row with the second generate, ...
 mix1: for i in 1 to 4 generate
 lut1: LUT_mul2 port map(byte_in => input_array(i*32 - 1 downto i*32 - 8), byte_out => a1(i*8-1 downto (i-1)*8));
 lut2: LUT_mul3 port map(byte_in => input_array(i*32 - 9 downto i*32 - 16), byte_out => b1(i*8-1 downto (i-1)*8));
@@ -86,6 +87,5 @@ lut3: LUT_mul3 port map(byte_in => input_array(i*32 - 1 downto i*32 - 8), byte_o
 output_array(i*32 - 25 downto (i-1)*32) <= b4(i*8-1 downto (i-1)*8) xor input_array(32*i -  9 downto 32*i - 16) xor input_array(32*i - 17 downto 32*i - 24) xor a4(i*8-1 downto (i-1)*8);
 
 end generate;
-
 
 end Behavioral;
