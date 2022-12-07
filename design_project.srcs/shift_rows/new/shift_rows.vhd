@@ -33,7 +33,6 @@ use IEEE.std_logic_unsigned.all;
 --use UNISIM.VComponents.all;
 
 entity shift_rows is port(
-clk : in std_logic;
 input_array : in std_logic_vector(127 downto 0); --x"3243f6a8885a308d313198a2e0370734";
 output_array : out std_logic_vector(127 downto 0)
  );
