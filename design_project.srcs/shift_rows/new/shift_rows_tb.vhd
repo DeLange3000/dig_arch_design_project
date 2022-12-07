@@ -8,7 +8,6 @@ end entity;
 
 architecture ben of shift_rows_tb is
 component shift_rows is port(
-clk : in std_logic;
 input_array : in std_logic_vector(127 downto 0); --x"3243f6a8885a308d313198a2e0370734";
 output_array : out std_logic_vector(127 downto 0)
 );

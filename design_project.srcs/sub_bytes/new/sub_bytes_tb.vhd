@@ -8,7 +8,6 @@ end entity;
 
 architecture ben of sub_bytes_tb is
 component sub_bytes is port(
-clk : in std_logic;
 input_array : in std_logic_vector(127 downto 0); --x"3243f6a8885a308d313198a2e0370734";
 output_array : out std_logic_vector(127 downto 0)
 );
@@ -21,7 +20,7 @@ end component;
 -- define signals: "signal D: std_logic_vector(3 downto 0);"
 
 begin
-    uut1 : sub_bytes port map(clk => clk, input_array => input_array, output_array => output_array);
+    uut1 : sub_bytes port map(input_array => input_array, output_array => output_array);
     stim : process
     begin
     clk <= '0';

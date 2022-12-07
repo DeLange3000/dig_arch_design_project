@@ -8,7 +8,6 @@ end entity;
 
 architecture ben of add_round_key_tb is
 component add_round_key is port(
-clk : in std_logic;
 input_array : in std_logic_vector(127 downto 0); --x"3243f6a8885a308d313198a2e0370734";
 key: in std_logic_vector(127 downto 0);-- x"2b7e151628aed2a6abf7158809cf4f3c";
 output_array : out std_logic_vector(127 downto 0)
@@ -22,7 +21,7 @@ end component;
 -- define signals: "signal D: std_logic_vector(3 downto 0);"
 
 begin
-    uut : add_round_key port map(clk => clk, input_array => input_array, output_array => output_array, key => key);
+    uut : add_round_key port map(input_array => input_array, output_array => output_array, key => key);
     stim : process
     begin
     clk <= '0';
