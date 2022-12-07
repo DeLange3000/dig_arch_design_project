@@ -1,0 +1,26 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 906328c0b7ac4096b47c5981b9798ecb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot full_encoding_tb_behav xil_defaultlib.full_encoding_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.math_real
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.add_round_key [add_round_key_default]
+Compiling architecture behavioral of entity xil_defaultlib.S_box [s_box_default]
+Compiling architecture behavioral of entity xil_defaultlib.sub_bytes [sub_bytes_default]
+Compiling architecture behavioral of entity xil_defaultlib.shift_rows [shift_rows_default]
+Compiling architecture behavioral of entity xil_defaultlib.LUT_mul2 [lut_mul2_default]
+Compiling architecture behavioral of entity xil_defaultlib.LUT_mul3 [lut_mul3_default]
+Compiling architecture behavioral of entity xil_defaultlib.mix_columns [mix_columns_default]
+Compiling architecture behavioral of entity xil_defaultlib.full_encoding [full_encoding_default]
+Compiling architecture ben of entity xil_defaultlib.full_encoding_tb
+Built simulation snapshot full_encoding_tb_behav

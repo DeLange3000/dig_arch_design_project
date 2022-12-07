@@ -2,13 +2,13 @@
 # Webtalk v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Dec  1 17:19:31 2022
-# Process ID: 5908
+# Start of session at: Tue Dec  6 15:30:18 2022
+# Process ID: 28804
 # Current directory: D:/VUB/MA1/digital architecture/design_project/design_project.sim/mix_columns/behav/xsim
 # Command line: wbtcv.exe -mode batch -source D:/VUB/MA1/digital architecture/design_project/design_project.sim/mix_columns/behav/xsim/xsim.dir/mix_columns_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: D:/VUB/MA1/digital architecture/design_project/design_project.sim/mix_columns/behav/xsim/webtalk.log
 # Journal file: D:/VUB/MA1/digital architecture/design_project/design_project.sim/mix_columns/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
 source D:/VUB/MA1/digital -notrace
-couldn't read file "D:/VUB/MA1/digital": no such file or directory
-INFO: [Common 17-206] Exiting Webtalk at Thu Dec  1 17:19:31 2022...
+couldn't read file "D:/VUB/MA1/digital": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Tue Dec  6 15:30:18 2022...
