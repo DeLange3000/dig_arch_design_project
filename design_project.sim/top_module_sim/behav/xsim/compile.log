@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/VUB/MA1/digital architecture/design_project/design_project.srcs/top_module_sim/new/top_model_sim_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'top_model_sim_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'full_encoding'

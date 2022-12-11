@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat Dec 10 19:34:58 2022
+| Date         : Sun Dec 11 21:08:01 2022
 | Host         : Mr-YEET running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file top_module_timing_summary_routed.rpt -pb top_module_timing_summary_routed.pb -rpx top_module_timing_summary_routed.rpx -warn_on_violation
 | Design       : top_module
@@ -52,25 +52,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 388 register/latch pins with no clock driven by root clock pin: btnC (HIGH)
-
- There are 47 register/latch pins with no clock driven by root clock pin: clk (HIGH)
-
- There are 392 register/latch pins with no clock driven by root clock pin: encoding/FSM_sequential_currentState_reg[0]/Q (HIGH)
-
- There are 264 register/latch pins with no clock driven by root clock pin: encoding/FSM_sequential_currentState_reg[1]/Q (HIGH)
-
- There are 128 register/latch pins with no clock driven by root clock pin: encoding/FSM_sequential_currentState_reg[1]_rep/Q (HIGH)
-
- There are 392 register/latch pins with no clock driven by root clock pin: encoding/FSM_sequential_currentState_reg[2]/Q (HIGH)
-
- There are 388 register/latch pins with no clock driven by root clock pin: encoding/loop_counter_reg[0]/Q (HIGH)
-
- There are 388 register/latch pins with no clock driven by root clock pin: encoding/loop_counter_reg[1]/Q (HIGH)
-
- There are 388 register/latch pins with no clock driven by root clock pin: encoding/loop_counter_reg[2]/Q (HIGH)
-
- There are 388 register/latch pins with no clock driven by root clock pin: encoding/loop_counter_reg[3]/Q (HIGH)
+ There are 450 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
 
 2. checking constant_clock
@@ -85,7 +67,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 494 pins that are not constrained for maximum delay. (HIGH)
+ There are 908 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -99,7 +81,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 27 ports with no output delay specified. (HIGH)
+ There are 14 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -133,7 +115,7 @@ Table of Contents
 
 12. checking latch_loops
 ------------------------
- There are 132 combinational latch loops in the design through latch input (HIGH)
+ There are 0 combinational latch loops in the design through latch input
 
 
 
