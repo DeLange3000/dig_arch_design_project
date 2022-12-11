@@ -39,9 +39,10 @@ entity full_encoding is port(
     output_array : out std_logic_vector(127 downto 0);
     --temp_array : out std_logic_vector(127 downto 0);
     reset : in std_logic;
-    start_encode : in std_logic
-    --debug : out std_logic_vector(3 downto 0)
-);
+    start_encode : in std_logic;
+    finished : out std_logic;
+    debug : out std_logic 
+    );
 end full_encoding;
 
 architecture Behavioral of full_encoding is
@@ -84,11 +85,11 @@ signal output_shift_rows : std_logic_vector(127 downto 0);
 
 signal input_all : std_logic_vector(127 downto 0);
 signal loop_counter :std_logic_vector(3 downto 0);
+signal encode_pressed : std_logic;
+signal encode_button_pressed: std_logic;
 
 type statetype is (idle, addkey, mixcolumns,  subbytes, shiftrows, error);
 signal currentState, nextState : statetype;
-
---signal switch : std_logic_vector(2 downto 0); --MAKE IT A STATE MACHINE
 
 begin
 
@@ -99,17 +100,52 @@ mix1 : mix_columns port map(input_array => input_all, output_array => output_mix
 
 process(start_encode, currentState)
 begin
+    if(start_encode = '1') then
+    encode_pressed <= '1';
+    end if;
+    if (loop_counter = 10) then 
+        encode_pressed <= '0';
+    end if;
+    
+    debug <= encode_pressed;
+
+--    if (loop_counter <= 9 and loop_counter > 0) then 
+--        encode_pressed <= '1';
+--        encode_button_pressed <= '0';
+--        else
+--            if (start_encode = '1') then 
+--                encode_button_pressed <= '1';
+--                encode_pressed <= '0';
+--            elsif (start_encode = '0') then 
+--                if(encode_button_pressed = '1') then
+--                    encode_pressed <= '1';
+--                else encode_pressed <= '0';
+--                end if;
+--                --encode_button_pressed <= '0';
+--            else
+--                encode_button_pressed <= '0';
+--                encode_pressed <= '0';
+--            end if;
+   
+--    end if;
+    --debug <= encode_pressed;
+end process;
+
+process(currentState, encode_pressed)
+begin
         case currentState is
         when idle =>
-            if(start_encode'event and start_encode = '1') then 
-                output_array <= x"00000000000000000000000000000000"; -- is zero before output
-                loop_counter <= "0000"; --reset loop counter
+            if(encode_pressed = '1') then
+                --output_array <= x"00000000000000000000000000000000"; -- is zero before output
+                finished <= '0';
                 nextState <= addkey;
                 input_all <= input_array;
-                input_key <= first_key;
-                else nextState <= idle;
-               
+                input_key <= first_key;   
             end if;
+            if(start_encode = '0') then 
+            nextState <= idle;              
+            end if;
+            loop_counter <= "0000"; --reset loop counter when state is idle
             
             --debug
             --temp_array <= input_all;
@@ -120,6 +156,7 @@ begin
             input_all <= output_add_round_key;
             else nextState <= idle;
             output_array <= output_add_round_key;
+            finished <= '1';
             end if;
                     
             --debug
@@ -167,11 +204,11 @@ end process;
 
 process(clk)
 begin
-   if(reset = '1') then
-        currentState <= idle;
-    end if;
-    
+ 
     if(clk'event) and (clk='1') then
+           if(reset = '1') then
+            currentState <= idle;
+        end if;
         currentState <= nextState;   
         --debug
         --debug <= loop_counter;

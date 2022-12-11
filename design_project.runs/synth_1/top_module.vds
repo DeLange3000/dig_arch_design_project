@@ -1,0 +1,576 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Dec 10 19:33:16 2022
+# Process ID: 28344
+# Current directory: D:/VUB/MA1/digital architecture/design_project/design_project.runs/synth_1
+# Command line: vivado.exe -log top_module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_module.tcl
+# Log file: D:/VUB/MA1/digital architecture/design_project/design_project.runs/synth_1/top_module.vds
+# Journal file: D:/VUB/MA1/digital architecture/design_project/design_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top_module.tcl -notrace
+Command: synth_design -top top_module -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 26916 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 354.281 ; gain = 85.457
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_module' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sources_1/new/top_module.vhd:22]
+INFO: [Synth 8-3491] module 'full_encoding' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:36' bound to instance 'encoding' of component 'full_encoding' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sources_1/new/top_module.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'full_encoding' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:48]
+INFO: [Synth 8-3491] module 'add_round_key' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/add_round_key/new/add_round_key.vhd:35' bound to instance 'ark1' of component 'add_round_key' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'add_round_key' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/add_round_key/new/add_round_key.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'add_round_key' (1#1) [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/add_round_key/new/add_round_key.vhd:42]
+INFO: [Synth 8-3491] module 'sub_bytes' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:35' bound to instance 'sub1' of component 'sub_bytes' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'sub_bytes' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:41]
+INFO: [Synth 8-3491] module 'S_box' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:5' bound to instance 'uut2' of component 'S_box' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'S_box' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:10]
+INFO: [Synth 8-226] default block is never used [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'S_box' (2#1) [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:10]
+INFO: [Synth 8-3491] module 'S_box' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:5' bound to instance 'uut2' of component 'S_box' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:51]
+INFO: [Synth 8-3491] module 'S_box' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:5' bound to instance 'uut2' of component 'S_box' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:51]
+INFO: [Synth 8-3491] module 'S_box' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:5' bound to instance 'uut2' of component 'S_box' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:51]
+INFO: [Synth 8-3491] module 'S_box' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:5' bound to instance 'uut2' of component 'S_box' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:51]
+INFO: [Synth 8-3491] module 'S_box' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:5' bound to instance 'uut2' of component 'S_box' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:51]
+INFO: [Synth 8-3491] module 'S_box' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:5' bound to instance 'uut2' of component 'S_box' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:51]
+INFO: [Synth 8-3491] module 'S_box' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:5' bound to instance 'uut2' of component 'S_box' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:51]
+INFO: [Synth 8-3491] module 'S_box' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:5' bound to instance 'uut2' of component 'S_box' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:51]
+INFO: [Synth 8-3491] module 'S_box' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:5' bound to instance 'uut2' of component 'S_box' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:51]
+INFO: [Synth 8-3491] module 'S_box' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:5' bound to instance 'uut2' of component 'S_box' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:51]
+INFO: [Synth 8-3491] module 'S_box' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:5' bound to instance 'uut2' of component 'S_box' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:51]
+INFO: [Synth 8-3491] module 'S_box' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:5' bound to instance 'uut2' of component 'S_box' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:51]
+INFO: [Synth 8-3491] module 'S_box' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:5' bound to instance 'uut2' of component 'S_box' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:51]
+INFO: [Synth 8-3491] module 'S_box' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:5' bound to instance 'uut2' of component 'S_box' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:51]
+INFO: [Synth 8-3491] module 'S_box' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/S_box.vhd:5' bound to instance 'uut2' of component 'S_box' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'sub_bytes' (3#1) [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sub_bytes/new/sub_bytes.vhd:41]
+INFO: [Synth 8-3491] module 'shift_rows' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/shift_rows/new/shift_rows.vhd:35' bound to instance 'shift1' of component 'shift_rows' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'shift_rows' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/shift_rows/new/shift_rows.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'shift_rows' (4#1) [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/shift_rows/new/shift_rows.vhd:41]
+INFO: [Synth 8-3491] module 'mix_columns' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:35' bound to instance 'mix1' of component 'mix_columns' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'mix_columns' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:41]
+INFO: [Synth 8-3491] module 'LUT_mul2' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:4' bound to instance 'lut1' of component 'LUT_mul2' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'LUT_mul2' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:9]
+INFO: [Synth 8-226] default block is never used [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'LUT_mul2' (5#1) [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:9]
+INFO: [Synth 8-3491] module 'LUT_mul3' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:6' bound to instance 'lut2' of component 'LUT_mul3' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'LUT_mul3' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:12]
+INFO: [Synth 8-226] default block is never used [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'LUT_mul3' (6#1) [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:12]
+INFO: [Synth 8-3491] module 'LUT_mul2' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:4' bound to instance 'lut1' of component 'LUT_mul2' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:61]
+INFO: [Synth 8-3491] module 'LUT_mul3' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:6' bound to instance 'lut2' of component 'LUT_mul3' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:62]
+INFO: [Synth 8-3491] module 'LUT_mul2' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:4' bound to instance 'lut1' of component 'LUT_mul2' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:61]
+INFO: [Synth 8-3491] module 'LUT_mul3' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:6' bound to instance 'lut2' of component 'LUT_mul3' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:62]
+INFO: [Synth 8-3491] module 'LUT_mul2' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:4' bound to instance 'lut1' of component 'LUT_mul2' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:61]
+INFO: [Synth 8-3491] module 'LUT_mul3' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:6' bound to instance 'lut2' of component 'LUT_mul3' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:62]
+INFO: [Synth 8-3491] module 'LUT_mul2' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:4' bound to instance 'lut2' of component 'LUT_mul2' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:67]
+INFO: [Synth 8-3491] module 'LUT_mul3' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:6' bound to instance 'lut3' of component 'LUT_mul3' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:68]
+INFO: [Synth 8-3491] module 'LUT_mul2' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:4' bound to instance 'lut2' of component 'LUT_mul2' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:67]
+INFO: [Synth 8-3491] module 'LUT_mul3' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:6' bound to instance 'lut3' of component 'LUT_mul3' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:68]
+INFO: [Synth 8-3491] module 'LUT_mul2' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:4' bound to instance 'lut2' of component 'LUT_mul2' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:67]
+INFO: [Synth 8-3491] module 'LUT_mul3' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:6' bound to instance 'lut3' of component 'LUT_mul3' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:68]
+INFO: [Synth 8-3491] module 'LUT_mul2' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:4' bound to instance 'lut2' of component 'LUT_mul2' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:67]
+INFO: [Synth 8-3491] module 'LUT_mul3' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:6' bound to instance 'lut3' of component 'LUT_mul3' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:68]
+INFO: [Synth 8-3491] module 'LUT_mul2' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:4' bound to instance 'lut2' of component 'LUT_mul2' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:75]
+INFO: [Synth 8-3491] module 'LUT_mul3' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:6' bound to instance 'lut3' of component 'LUT_mul3' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:76]
+INFO: [Synth 8-3491] module 'LUT_mul2' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:4' bound to instance 'lut2' of component 'LUT_mul2' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:75]
+INFO: [Synth 8-3491] module 'LUT_mul3' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:6' bound to instance 'lut3' of component 'LUT_mul3' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:76]
+INFO: [Synth 8-3491] module 'LUT_mul2' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:4' bound to instance 'lut2' of component 'LUT_mul2' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:75]
+INFO: [Synth 8-3491] module 'LUT_mul3' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:6' bound to instance 'lut3' of component 'LUT_mul3' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:76]
+INFO: [Synth 8-3491] module 'LUT_mul2' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:4' bound to instance 'lut2' of component 'LUT_mul2' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:75]
+INFO: [Synth 8-3491] module 'LUT_mul3' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:6' bound to instance 'lut3' of component 'LUT_mul3' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:76]
+INFO: [Synth 8-3491] module 'LUT_mul2' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:4' bound to instance 'lut2' of component 'LUT_mul2' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:83]
+INFO: [Synth 8-3491] module 'LUT_mul3' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:6' bound to instance 'lut3' of component 'LUT_mul3' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:84]
+INFO: [Synth 8-3491] module 'LUT_mul2' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:4' bound to instance 'lut2' of component 'LUT_mul2' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:83]
+INFO: [Synth 8-3491] module 'LUT_mul3' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:6' bound to instance 'lut3' of component 'LUT_mul3' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:84]
+INFO: [Synth 8-3491] module 'LUT_mul2' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:4' bound to instance 'lut2' of component 'LUT_mul2' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:83]
+INFO: [Synth 8-3491] module 'LUT_mul3' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:6' bound to instance 'lut3' of component 'LUT_mul3' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:84]
+INFO: [Synth 8-3491] module 'LUT_mul2' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul2.vhd:4' bound to instance 'lut2' of component 'LUT_mul2' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:83]
+INFO: [Synth 8-3491] module 'LUT_mul3' declared at 'D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/LUT_mul3.vhd:6' bound to instance 'lut3' of component 'LUT_mul3' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:84]
+INFO: [Synth 8-256] done synthesizing module 'mix_columns' (7#1) [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/mix_columns/new/mix_columns.vhd:41]
+WARNING: [Synth 8-614] signal 'loop_counter' is read in the process but is not in the sensitivity list [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:100]
+WARNING: [Synth 8-614] signal 'input_array' is read in the process but is not in the sensitivity list [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:110]
+WARNING: [Synth 8-614] signal 'first_key' is read in the process but is not in the sensitivity list [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:110]
+WARNING: [Synth 8-614] signal 'start_encode' is read in the process but is not in the sensitivity list [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:110]
+WARNING: [Synth 8-614] signal 'loop_counter' is read in the process but is not in the sensitivity list [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:110]
+WARNING: [Synth 8-614] signal 'output_add_round_key' is read in the process but is not in the sensitivity list [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:110]
+WARNING: [Synth 8-614] signal 'output_sub_bytes' is read in the process but is not in the sensitivity list [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:110]
+WARNING: [Synth 8-614] signal 'last_key' is read in the process but is not in the sensitivity list [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:110]
+WARNING: [Synth 8-614] signal 'output_shift_rows' is read in the process but is not in the sensitivity list [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:110]
+WARNING: [Synth 8-614] signal 'output_mix_columns' is read in the process but is not in the sensitivity list [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:110]
+INFO: [Synth 8-256] done synthesizing module 'full_encoding' (8#1) [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:48]
+INFO: [Synth 8-226] default block is never used [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sources_1/new/top_module.vhd:75]
+WARNING: [Synth 8-614] signal 'output_array' is read in the process but is not in the sensitivity list [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sources_1/new/top_module.vhd:52]
+WARNING: [Synth 8-614] signal 'btnR' is read in the process but is not in the sensitivity list [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sources_1/new/top_module.vhd:52]
+WARNING: [Synth 8-614] signal 'clk' is read in the process but is not in the sensitivity list [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sources_1/new/top_module.vhd:52]
+INFO: [Synth 8-226] default block is never used [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sources_1/new/top_module.vhd:159]
+INFO: [Synth 8-256] done synthesizing module 'top_module' (9#1) [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/sources_1/new/top_module.vhd:22]
+WARNING: [Synth 8-3917] design top_module has port dp driven by constant 1
+WARNING: [Synth 8-3331] design full_encoding has unconnected port reset
+WARNING: [Synth 8-3331] design top_module has unconnected port btnU
+WARNING: [Synth 8-3331] design top_module has unconnected port btnD
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[15]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[14]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[13]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[12]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[11]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[10]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[9]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[8]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[7]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[6]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[5]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[4]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[3]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[2]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[1]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 410.887 ; gain = 142.062
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 410.887 ; gain = 142.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 410.887 ; gain = 142.062
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/constrs_1/new/proj_ctr.xdc]
+Finished Parsing XDC File [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/constrs_1/new/proj_ctr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/constrs_1/new/proj_ctr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_module_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_module_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 735.645 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 735.645 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 735.645 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 735.645 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 735.645 ; gain = 466.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 735.645 ; gain = 466.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 735.645 ; gain = 466.820
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'currentState_reg' in module 'full_encoding'
+INFO: [Synth 8-5544] ROM "nextState" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextState" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextState" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'switch_reg' in module 'top_module'
+INFO: [Synth 8-5544] ROM "an" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "switch" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'output_array_reg' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:115]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_nextState_reg' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:117]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_nextState_reg' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:117]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                  addkey |                              001 |                              001
+                subbytes |                              010 |                              011
+               shiftrows |                              011 |                              100
+              mixcolumns |                              100 |                              010
+                   error |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'currentState_reg' using encoding 'sequential' in module 'full_encoding'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_nextState_reg' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:117]
+WARNING: [Synth 8-327] inferring latch for variable 'finished_reg' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:116]
+WARNING: [Synth 8-327] inferring latch for variable 'loop_counter_reg' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:123]
+WARNING: [Synth 8-327] inferring latch for variable 'input_all_reg' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:95]
+WARNING: [Synth 8-327] inferring latch for variable 'input_key_reg' [D:/VUB/MA1/digital architecture/design_project/design_project.srcs/full_encoding/new/full_encoding.vhd:95]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+                 iSTATE0 |                               01 |                               01
+                 iSTATE1 |                               10 |                               10
+                 iSTATE2 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'switch_reg' using encoding 'sequential' in module 'top_module'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 735.645 ; gain = 466.820
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+	   4 Input      8 Bit         XORs := 16    
++---Registers : 
+	               11 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
++---Muxes : 
+	   6 Input    128 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   6 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 3     
+	  10 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	  10 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top_module 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module add_round_key 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module mix_columns 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      8 Bit         XORs := 16    
+Module full_encoding 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Muxes : 
+	   6 Input    128 Bit        Muxes := 3     
+	   6 Input      4 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 3     
+	  10 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	  10 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design top_module has port dp driven by constant 1
+WARNING: [Synth 8-3331] design full_encoding has unconnected port reset
+WARNING: [Synth 8-3331] design top_module has unconnected port btnU
+WARNING: [Synth 8-3331] design top_module has unconnected port btnD
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[15]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[14]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[13]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[12]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[11]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[10]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[9]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[8]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[7]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[6]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[5]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[4]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[3]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[2]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[1]
+WARNING: [Synth 8-3331] design top_module has unconnected port sw[0]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 735.645 ; gain = 466.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+---------------------------------+---------------+----------------+
+|Module Name | RTL Object                      | Depth x Width | Implemented As | 
++------------+---------------------------------+---------------+----------------+
+|S_box       | byte_out                        | 256x8         | LUT            | 
+|LUT_mul2    | byte_out                        | 256x8         | LUT            | 
+|LUT_mul3    | byte_out                        | 256x8         | LUT            | 
+|sub_bytes   | sub_bytes_gen[0].uut2/byte_out  | 256x8         | LUT            | 
+|sub_bytes   | sub_bytes_gen[2].uut2/byte_out  | 256x8         | LUT            | 
+|sub_bytes   | sub_bytes_gen[3].uut2/byte_out  | 256x8         | LUT            | 
+|sub_bytes   | sub_bytes_gen[4].uut2/byte_out  | 256x8         | LUT            | 
+|sub_bytes   | sub_bytes_gen[5].uut2/byte_out  | 256x8         | LUT            | 
+|sub_bytes   | sub_bytes_gen[6].uut2/byte_out  | 256x8         | LUT            | 
+|sub_bytes   | sub_bytes_gen[7].uut2/byte_out  | 256x8         | LUT            | 
+|sub_bytes   | sub_bytes_gen[8].uut2/byte_out  | 256x8         | LUT            | 
+|sub_bytes   | sub_bytes_gen[9].uut2/byte_out  | 256x8         | LUT            | 
+|sub_bytes   | sub_bytes_gen[10].uut2/byte_out | 256x8         | LUT            | 
+|sub_bytes   | sub_bytes_gen[11].uut2/byte_out | 256x8         | LUT            | 
+|sub_bytes   | sub_bytes_gen[12].uut2/byte_out | 256x8         | LUT            | 
+|sub_bytes   | sub_bytes_gen[13].uut2/byte_out | 256x8         | LUT            | 
+|sub_bytes   | sub_bytes_gen[14].uut2/byte_out | 256x8         | LUT            | 
+|sub_bytes   | sub_bytes_gen[15].uut2/byte_out | 256x8         | LUT            | 
+|mix_columns | mix1[1].lut1/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix1[1].lut2/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix1[2].lut1/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix1[2].lut2/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix1[3].lut1/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix1[3].lut2/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix1[4].lut1/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix1[4].lut2/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix2[1].lut2/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix2[1].lut3/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix2[2].lut2/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix2[2].lut3/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix2[3].lut2/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix2[3].lut3/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix2[4].lut2/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix2[4].lut3/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix3[1].lut2/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix3[1].lut3/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix3[2].lut2/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix3[2].lut3/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix3[3].lut2/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix3[3].lut3/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix3[4].lut2/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix3[4].lut3/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix4[1].lut2/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix4[1].lut3/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix4[2].lut2/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix4[2].lut3/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix4[3].lut2/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix4[3].lut3/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix4[4].lut2/byte_out           | 256x8         | LUT            | 
+|mix_columns | mix4[4].lut3/byte_out           | 256x8         | LUT            | 
++------------+---------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 746.578 ; gain = 477.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 748.863 ; gain = 480.039
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 782.062 ; gain = 513.238
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 782.062 ; gain = 513.238
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 782.062 ; gain = 513.238
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 782.062 ; gain = 513.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 782.062 ; gain = 513.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 782.062 ; gain = 513.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 782.062 ; gain = 513.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     4|
+|2     |CARRY4 |    16|
+|3     |LUT1   |     4|
+|4     |LUT2   |   281|
+|5     |LUT3   |   162|
+|6     |LUT4   |    53|
+|7     |LUT5   |   153|
+|8     |LUT6   |   897|
+|9     |MUXF7  |   122|
+|10    |FDRE   |    47|
+|11    |LD     |   392|
+|12    |IBUF   |     4|
+|13    |OBUF   |    28|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------------------+--------------+------+
+|      |Instance                       |Module        |Cells |
++------+-------------------------------+--------------+------+
+|1     |top                            |              |  2163|
+|2     |  encoding                     |full_encoding |  2040|
+|3     |    sub1                       |sub_bytes     |   189|
+|4     |      \sub_bytes_gen[0].uut2   |S_box         |    13|
+|5     |      \sub_bytes_gen[10].uut2  |S_box_0       |    15|
+|6     |      \sub_bytes_gen[11].uut2  |S_box_1       |    12|
+|7     |      \sub_bytes_gen[12].uut2  |S_box_2       |    12|
+|8     |      \sub_bytes_gen[13].uut2  |S_box_3       |    10|
+|9     |      \sub_bytes_gen[14].uut2  |S_box_4       |    13|
+|10    |      \sub_bytes_gen[15].uut2  |S_box_5       |    11|
+|11    |      \sub_bytes_gen[1].uut2   |S_box_6       |    12|
+|12    |      \sub_bytes_gen[2].uut2   |S_box_7       |    12|
+|13    |      \sub_bytes_gen[3].uut2   |S_box_8       |    11|
+|14    |      \sub_bytes_gen[4].uut2   |S_box_9       |    14|
+|15    |      \sub_bytes_gen[5].uut2   |S_box_10      |    10|
+|16    |      \sub_bytes_gen[6].uut2   |S_box_11      |    11|
+|17    |      \sub_bytes_gen[7].uut2   |S_box_12      |    11|
+|18    |      \sub_bytes_gen[8].uut2   |S_box_13      |    12|
+|19    |      \sub_bytes_gen[9].uut2   |S_box_14      |    10|
++------+-------------------------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 782.062 ; gain = 513.238
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 782.062 ; gain = 188.480
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 782.062 ; gain = 513.238
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 530 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'top_module' is not ideal for floorplanning, since the cellview 'full_encoding' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 782.062 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 392 instances were transformed.
+  LD => LDCE: 392 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+97 Infos, 62 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 782.062 ; gain = 513.238
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 782.062 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/VUB/MA1/digital architecture/design_project/design_project.runs/synth_1/top_module.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_module_utilization_synth.rpt -pb top_module_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 10 19:33:55 2022...

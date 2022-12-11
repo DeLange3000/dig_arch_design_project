@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../design_project.srcs/mix_columns/new/LUT_mul2.vhd" \
+"../../../../design_project.srcs/mix_columns/new/LUT_mul3.vhd" \
+"../../../../design_project.srcs/sub_bytes/new/S_box.vhd" \
+"../../../../design_project.srcs/add_round_key/new/add_round_key.vhd" \
+"../../../../design_project.srcs/full_encoding/new/full_encoding.vhd" \
+"../../../../design_project.srcs/mix_columns/new/mix_columns.vhd" \
+"../../../../design_project.srcs/shift_rows/new/shift_rows.vhd" \
+"../../../../design_project.srcs/sub_bytes/new/sub_bytes.vhd" \
+"../../../../design_project.srcs/sources_1/new/top_module.vhd" \
+
+# Do not sort compile order
+nosort
