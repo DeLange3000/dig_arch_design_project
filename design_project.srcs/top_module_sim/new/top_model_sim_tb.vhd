@@ -42,7 +42,7 @@ begin
     uut6 : top_model_sim port map(clk => clk, btnR => btnR, btnL => btnL, btnC => btnC, btnU => btnU, btnD => btnD, led => led, an => an, seg => seg, sw => sw, dp => dp, input_array => input_array, output_array => output_array);
     stim : process
     begin
-    btnL <='1';
+    btnR <='1';
     btnC <= '0';
     input_array <= x"6BC1BEE22E409F96E93D7E117393172A";
     clk <= '0';
@@ -50,7 +50,7 @@ begin
     wait for 1 ns;
     clk <= '1';
     wait for 1 ns;
-    btnL <= '0';
+    btnR <= '0';
     clk <= '0';
     wait for 1 ns;
     clk <= '1';
@@ -65,7 +65,7 @@ begin
     
     btnC <= '0';
     
-    for i in 0 to 100 loop
+    for i in 0 to 1000 loop
         clk <= '0';
         wait for 1 ns;
         clk <= '1';

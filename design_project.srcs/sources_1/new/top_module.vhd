@@ -26,14 +26,16 @@ component full_encoding is port(
     input_array : in std_logic_vector(127 downto 0);
     output_array : out std_logic_vector(127 downto 0);
     --temp_array : out std_logic_vector(127 downto 0);
-    reset : in std_logic;
     start_encode : in std_logic;
+    reset : in std_logic;
     finished : out std_logic
     );
-    --debug : out std_logic
+    
 end component;
  
 signal input_array, output_array : std_logic_vector(127 downto 0);
+signal finished : std_logic;
+signal reset : std_logic;
 
 ---TESTING
 signal switch : std_logic_vector(1 downto 0) := "00";
@@ -42,43 +44,95 @@ signal counter : std_logic_vector(10 downto 0) := "00000000000";
 signal output_counter : std_logic_vector(16 downto 0):= "00000000000000000";
 signal switch_output : std_logic_vector(3 downto 0) := "0000";
 signal output_selector : std_logic_vector (3 downto 0) := "0000";
-signal finished : std_logic;
+
+--debugging button behaviour
+--signal button_counter : std_logic_vector(3 downto 0) := "0000";
+--signal button_press : std_logic := '0';
 
 begin
 
-encoding : full_encoding port map(clk => clk, input_array => input_array, output_array => output_array, reset => btnR, start_encode => btnC, finished => finished);
+--CHOOSE INPUT ARRAY:
 input_array <= x"6BC1BEE22E409F96E93D7E117393172A";
+--input_array <= x"AE2D8A571E03AC9C9EB76FAC45AF8E51";
+--input_array <= x"30C81C46A35CE411E5FBC1191A0A52EF";
+--input_array <= x"F69F2445DF4F9B17AD2B417BE66C3710";
 
-process(btnC, btnL)
+encoding : full_encoding port map(clk => clk, input_array => input_array, output_array => output_array, start_encode => btnC, finished => finished, reset => reset); --start_encode => btnC, reset => btnR
+reset <= btnR;
+
+--debugging button behaviour
+--process(clk)
+--begin
+
+--if (clk'event and clk = '1') then
+
+--    if(button_counter = "0011") then 
+--    button_press <= '1';
+--    button_counter <= button_counter + 1;
+--    elsif (button_counter = "1111") then 
+--    button_press <= '0';
+--    else button_counter <= button_counter + 1;
+--    end if;
+
+--    end if;
+--end process;
+----------------------------------------------
+
+
+process(clk)
 begin
+--this controls leds:
 
-
-
+--is output array is same as wanted one, led(0) is on
 if(output_array = x"3AD77BB40D7A3660A89ECAF32466EF97") then
-    led <= "0111111111111110";
-    else
-    led <= "1000000000000001";
+    led(0) <= '1';
+    else led(0) <= '0';
  end if;
-
  
- if(btnL = '1' or btnC = '1' or btnR = '1') then led(3) <= '1';
+ --if the encryption is finished, led(1) is on
+ if(finished = '1') then led(1) <= '1';
+ else led(1) <= '0';
  end if;
+ 
+ -- if a button is pressed, led(2) is on
+ if(btnL = '1' or btnC = '1' or btnR = '1' or btnU = '1' or btnD = '1') then led(2) <= '1';
+ else led(2) <= '0';
+ end if;
+ 
+ --shows which part of the output is shown
+ case output_selector is
+       when "0001" => led(15 downto 7) <= "100000000";
+       when "0010" => led(15 downto 7) <= "010000000";
+       when "0011" => led(15 downto 7) <= "001000000";
+       when "0100" => led(15 downto 7) <= "000100000";
+       when "0101" => led(15 downto 7) <= "000010000";
+       when "0110" => led(15 downto 7) <= "000001000";
+       when "0111" => led(15 downto 7) <= "000000100";
+       when "1000" => led(15 downto 7) <= "000000010";
+       when "1001" => led(15 downto 7) <= "000000001";
+       when others => led(15 downto 7) <= "000000000";
+end case;
+ 
+ 
+
     
 --end process;
 
-
-----TESTING------------------
+   
     if (clk'event and clk = '1') then
+    
+     -- counter for controlling the anodes of the 7-seg display
         if(counter = "11111111111") then
         counter <= "00000000000";
         
+    --shows output in sequential order
     if(output_selector = "0000") then an <= "1111";
             else
             case switch is
                 when "00" => switch <= "01";
-                    an <= "1110";
+                    an <= "0111";
                     case output_selector is
-                    when "0001" => inputs <= x"0";
+                    when "0001" => inputs <= x"a";
                     when "0010" => inputs <= output_array(127 downto 124);
                     when "0011" => inputs <= output_array(111 downto 108);
                     when "0100" => inputs <= output_array(95 downto 92);
@@ -90,9 +144,9 @@ if(output_array = x"3AD77BB40D7A3660A89ECAF32466EF97") then
                     when others => inputs <= x"0";
                     end case;
                 when "01" => switch <= "10";
-                an <= "1101";
+                an <= "1011";
                 case output_selector is
-                    when "0001" => inputs <= x"5";
+                    when "0001" => inputs <= x"e";
                     when "0010" => inputs <= output_array(123 downto 120);
                     when "0011" => inputs <= output_array(107 downto 104);
                     when "0100" => inputs <= output_array(91 downto 88);
@@ -104,59 +158,72 @@ if(output_array = x"3AD77BB40D7A3660A89ECAF32466EF97") then
                     when others => inputs <= x"0";
                     end case;
                 when "10" => switch <= "11";
-                an <= "1011";
+                an <= "1101";
                 case output_selector is
-                    when "0001" => inputs <= x"0";
+                    when "0001" => inputs <= x"5";
                     when "0010" => inputs <= output_array(119 downto 116);
                     when "0011" => inputs <= output_array(103 downto 100);
                     when "0100" => inputs <= output_array(87 downto 84);
                     when "0101" => inputs <= output_array(71 downto 68);
                     when "0110" => inputs <= output_array(55 downto 52);
                     when "0111" => inputs <= output_array(39 downto 36);
-                    when "1000" => inputs <= output_array(35 downto 32);
+                    when "1000" => inputs <= output_array(23 downto 20);
                     when "1001" => inputs <= output_array(7 downto 4);
                     when others => inputs <= x"0";
                     end case;
                 when "11" => switch <= "00";
-                an <= "0111";
-                case output_selector is
-                    when "0001" => inputs <= x"0";
-                    when "0010" => inputs <= output_array(115 downto 112);
-                    when "0011" => inputs <= output_array(99 downto 96);
-                    when "0100" => inputs <= output_array(83 downto 80);
-                    when "0101" => inputs <= output_array(67 downto 64);
-                    when "0110" => inputs <= output_array(51 downto 48);
-                    when "0111" => inputs <= output_array(35 downto 32);
-                    when "1000" => inputs <= output_array(31 downto 28);
-                    when "1001" => inputs <= output_array(3 downto 0);
-                    when others => inputs <= x"0";
+                --switch off last anode for first part of shown output
+                if(output_selector = "0001") then an <= "1111";
+                else an <= "1110";
+                    case output_selector is
+                        when "0001" => inputs <= x"0";
+                        when "0010" => inputs <= output_array(115 downto 112);
+                        when "0011" => inputs <= output_array(99 downto 96);
+                        when "0100" => inputs <= output_array(83 downto 80);
+                        when "0101" => inputs <= output_array(67 downto 64);
+                        when "0110" => inputs <= output_array(51 downto 48);
+                        when "0111" => inputs <= output_array(35 downto 32);
+                        when "1000" => inputs <= output_array(19 downto 16);
+                        when "1001" => inputs <= output_array(3 downto 0);
+                        when others => inputs <= x"0";
+                        end case;
+                      end if;  
+                    when others => switch <= "00";
+                    an <= "1111";
+                    inputs <= "0000";
                     end case;
-                when others => switch <= "00";
-                an <= "1111";
-                inputs <= "0000";
-                end case;
           end if;
-            
-            if (output_counter = "11111111111111111") then
-                output_counter <= "00000000000000000";
-                if( output_selector = "1000") then output_selector <= "0001";
-                else
+          
+          --if encryption is finished, the 7-seg display will turn on
+            if(finished = '1' and output_selector = "0000") then 
                 output_selector <= output_selector + 1;
-                    if(finished = '1') then output_selector <= output_selector + 1;
-                    else output_selector <= "0000";
-                    end if;
+            elsif (finished = '1') then
+            -- counter for displaying the output in sequential order (reset makes sure that new output starts at beginning on 7-seg display)
+            -- reset counter to 0 to keep cycling through output_array
+                if (output_counter = "11111111111111111" or reset = '1') then
+                    output_counter <= "00000000000000000";
+                    -- reset output selector to keep cycling through output_array
+                    if( output_selector = "1001") then output_selector <= "0001";
+                    else output_selector <= output_selector + 1;
+                    end if; 
+                else output_counter <= output_counter + 1;     
                 end if;
-            else
-                output_counter <= output_counter + '1';
+            else 
+                -- keep display off
+                output_selector <= "0000";
+                output_counter <= "00000000000000000";
             end if;
+
          else
          counter <= counter + '1';
          end if;
-    end if;
-    
+            -- dont show dots on 7-seg display
            dp <= '1';
+        end if;
 end process;
 
+
+--LUT for 7-seg display
 process(inputs)
 begin
         case inputs is
