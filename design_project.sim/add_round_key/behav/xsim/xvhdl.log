@@ -1,4 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/VUB/MA1/digital architecture/design_project/design_project.srcs/add_round_key/new/add_round_key.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'add_round_key'
 INFO: [VRFC 10-163] Analyzing VHDL file "D:/VUB/MA1/digital architecture/design_project/design_project.srcs/add_round_key/new/add_round_key_tb.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'add_round_key_tb'

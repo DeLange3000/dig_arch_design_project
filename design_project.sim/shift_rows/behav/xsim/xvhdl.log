@@ -1,2 +1,4 @@
 INFO: [VRFC 10-163] Analyzing VHDL file "D:/VUB/MA1/digital architecture/design_project/design_project.srcs/shift_rows/new/shift_rows.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'shift_rows'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/VUB/MA1/digital architecture/design_project/design_project.srcs/shift_rows/new/shift_rows_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'shift_rows_tb'

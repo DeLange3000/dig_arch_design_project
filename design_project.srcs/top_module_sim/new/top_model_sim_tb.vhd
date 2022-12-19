@@ -65,7 +65,7 @@ begin
     
     btnC <= '0';
     
-    for i in 0 to 1000 loop
+    for i in 0 to 100 loop
         clk <= '0';
         wait for 1 ns;
         clk <= '1';

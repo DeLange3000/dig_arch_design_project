@@ -23,9 +23,10 @@ begin
     uut4 : mix_columns port map(input_array => input_array, output_array => output_array);
     stim : process
     begin
+    input_array <= x"09287F476F746ABF2C4A6204DA08E3EE";
     clk <= '0';
     wait for 10 ns;
-    input_array <= x"09287F476F746ABF2C4A6204DA08E3EE";
+    
     
 
     clk <= '1';

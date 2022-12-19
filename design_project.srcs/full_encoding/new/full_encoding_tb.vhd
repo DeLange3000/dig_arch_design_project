@@ -11,7 +11,7 @@ architecture ben of full_encoding_tb is
     clk :in std_logic;
     input_array : in std_logic_vector(127 downto 0);
     output_array : out std_logic_vector(127 downto 0);
-    temp_array : out std_logic_vector(127 downto 0);
+    --temp_array : out std_logic_vector(127 downto 0);
     reset : in std_logic;
     start_encode : in std_logic;
     finished : out std_logic
@@ -22,11 +22,11 @@ architecture ben of full_encoding_tb is
 
  signal clk, reset, start_encode, finished : std_logic;
  signal input_array, output_array : std_logic_vector(127 downto 0);
- signal temp_array : std_logic_vector(127 downto 0);
+ --signal temp_array : std_logic_vector(127 downto 0);
  --signal debug : std_logic;
 
 begin
-    uut5 : full_encoding port map(clk => clk, input_array => input_array, output_array => output_array, reset => reset, start_encode => start_encode, finished => finished, temp_array => temp_array);--, debug => debug); --, , debug => debug);
+    uut5 : full_encoding port map(clk => clk, input_array => input_array, output_array => output_array, reset => reset, start_encode => start_encode, finished => finished); --, temp_array => temp_array);--, debug => debug); --, , debug => debug);
     stim : process
     begin
     reset <='1';

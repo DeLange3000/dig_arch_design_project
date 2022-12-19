@@ -1,7 +1,7 @@
-Running: xsim.dir/add_round_key_tb_behav/xsimk.exe -simmode gui -wdb add_round_key_tb_behav.wdb -simrunnum 0 -socket 64461
+Running: xsim.dir/add_round_key_tb_behav/xsimk.exe -simmode gui -wdb add_round_key_tb_behav.wdb -simrunnum 0 -socket 61733
 Design successfully loaded
-Design Loading Memory Usage: 6360 KB (Peak: 6360 KB)
-Design Loading CPU Usage: 15 ms
+Design Loading Memory Usage: 5872 KB (Peak: 5872 KB)
+Design Loading CPU Usage: 30 ms
 Simulation completed
-Simulation Memory Usage: 6864 KB (Peak: 6864 KB)
-Simulation CPU Usage: 15 ms
+Simulation Memory Usage: 6392 KB (Peak: 6392 KB)
+Simulation CPU Usage: 30 ms

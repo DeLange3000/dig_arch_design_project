@@ -20,12 +20,13 @@ end component;
 -- define signals: "signal D: std_logic_vector(3 downto 0);"
 
 begin
-    uut3 : shift_rows port map(clk => clk, input_array => input_array, output_array => output_array);
+    uut3 : shift_rows port map(input_array => input_array, output_array => output_array);
     stim : process
     begin
+    input_array <= x"090862BF6F28E3042C747FEEDA4A6A47";
     clk <= '0';
     wait for 10 ns;
-    input_array <= x"090862BF6F28E3042C747FEEDA4A6A47";
+
     
 
     clk <= '1';

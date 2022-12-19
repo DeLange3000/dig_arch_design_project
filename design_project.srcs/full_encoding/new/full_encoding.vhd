@@ -154,31 +154,6 @@ begin
             encode_pressed <= '0';
         end if;
     end if;
-    
---------------DEBUG-------------------------
-    --debug <= encode_pressed;
-
---    if (loop_counter <= 9 and loop_counter > 0) then 
---        encode_pressed <= '1';
---        encode_button_pressed <= '0';
---        else
---            if (start_encode = '1') then 
---                encode_button_pressed <= '1';
---                encode_pressed <= '0';
---            elsif (start_encode = '0') then 
---                if(encode_button_pressed = '1') then
---                    encode_pressed <= '1';
---                else encode_pressed <= '0';
---                end if;
---                --encode_button_pressed <= '0';
---            else
---                encode_button_pressed <= '0';
---                encode_pressed <= '0';
---            end if;
-   
---    end if;
-    --debug <= encode_pressed;
-----------------------------------------------
 
 end process;
 

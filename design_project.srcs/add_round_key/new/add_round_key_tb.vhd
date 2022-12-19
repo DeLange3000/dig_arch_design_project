@@ -24,10 +24,13 @@ begin
     uut : add_round_key port map(input_array => input_array, output_array => output_array, key => key);
     stim : process
     begin
-    clk <= '0';
-    wait for 10 ns;
     input_array <= x"6bc1bee22e409f96e93d7e117393172a";
     key <= x"2b7e151628aed2a6abf7158809cf4f3c";
+    clk <= '0';
+    wait for 10 ns;
+    
+    
+
     
 
     clk <= '1';

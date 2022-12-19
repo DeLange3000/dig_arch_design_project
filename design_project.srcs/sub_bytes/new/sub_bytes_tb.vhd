@@ -22,11 +22,11 @@ end component;
 begin
     uut1 : sub_bytes port map(input_array => input_array, output_array => output_array);
     stim : process
-    begin
-    clk <= '0';
-    wait for 10 ns;
+    begin   
     input_array <= x"40bfabf406ee4d3042ca6b997a5c5816";
-    
+    clk <= '0';
+
+    wait for 10 ns;
 
     clk <= '1';
     wait for 10 ns;
